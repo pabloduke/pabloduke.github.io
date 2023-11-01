@@ -7,8 +7,29 @@
 <body>
 <script src="flashCards.js"></script>
 <h3>FLASHCARDS</h3>
-<script>askQuestions()</script>
-<p>Who is the best basketball player?</p>
+<script>askQuestion()</script>
 
+<div id = "Question"></div>
+<br/>
+
+
+<form id = "answer_question" onsubmit="submit_answer();">
+    <input type="radio" id="a_answer_radio"  class="answer" name="fav_language" value="">
+    <label id="a_answer_label" for="a_answer_radio"></label>
+    <br/>
+    <input type="radio" id="b_answer_radio"  class="answer" name="fav_language" value="">
+    <label id="b_answer_label" for="b_answer_radio"></label>
+    <br/>
+    <input type="radio" id="c_answer_radio"  class="answer" name="fav_language" value="">
+    <label id="c_answer_label" for="c_answer_radio"></label>
+    <br/>
+    <input type="radio" id="d_answer_radio"  class="answer" name="fav_language" value="">
+    <label id="d_answer_label" for="d_answer_radio"></label>
+    <br/><br/>
+    <input type="submit" value="Submit">
+</form>
+
+<h3>USER ANSWER</h3>
+<div id="user_answer"></div>
 </body>
 </html>
