@@ -42,7 +42,7 @@ function getQuestionsList() {
                 "correct_answer": "d"
             },
             {
-                "Question": "Which American President placed people of Japanese descent into internment camps?",
+                "Question": "Which American President placed American citizens of Japanese descent into internment camps?",
                 "a_answer": "Donald Trump",
                 "b_answer": "Franklin Delano Roosevelt (the commie)",
                 "c_answer": "Abraham Lincoln (the dictator)",
