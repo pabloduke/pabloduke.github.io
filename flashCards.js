@@ -36,9 +36,10 @@ function submit_answer() {
             console.log(user_answer)
             formElement[answer].checked = false
             let divAnswer = document.getElementById("result")
-            let total_correct = parseInt(document.getElementById("total_correct").value) + 1
-            document.getElementById("total_correct").value = total_correct
+            let total_correct = parseInt(document.getElementById("total_correct").value)
             if (user_answer === correct_answer) {
+                total_correct += 1
+                document.getElementById("total_correct").value = total_correct
                 divAnswer.innerText = "CORRECT"
                 document.getElementById("total_correct_display").innerText = "(" + total_correct + " / " + total_questions + ")"
             } else {
