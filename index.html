@@ -5,31 +5,34 @@
     <title>FlashCards</title>
 </head>
 <body>
-<script src="flashCards.js"></script>
-<h3>FLASHCARDS</h3>
-<script>askQuestion()</script>
 
+<script src="flashCards.js"></script>
+<script src="questions.js"></script>
+
+<input id = "total_correct" type="hidden" value="0">
+<div id="total_correct_display">(0 / 0) Correct</div>
 <div id = "Question"></div>
 <br/>
-
-
-<form id = "answer_question" onsubmit="submit_answer();">
-    <input type="radio" id="a_answer_radio"  class="answer" name="fav_language" value="">
+<form id = "answer_question" >
+    <input type="radio" id="a_answer_radio"  class="answer" value="">
     <label id="a_answer_label" for="a_answer_radio"></label>
     <br/>
-    <input type="radio" id="b_answer_radio"  class="answer" name="fav_language" value="">
+    <input type="radio" id="b_answer_radio"  class="answer"  value="">
     <label id="b_answer_label" for="b_answer_radio"></label>
     <br/>
-    <input type="radio" id="c_answer_radio"  class="answer" name="fav_language" value="">
+    <input type="radio" id="c_answer_radio"  class="answer" value="">
     <label id="c_answer_label" for="c_answer_radio"></label>
     <br/>
-    <input type="radio" id="d_answer_radio"  class="answer" name="fav_language" value="">
+    <input type="radio" id="d_answer_radio"  class="answer"  value="">
     <label id="d_answer_label" for="d_answer_radio"></label>
     <br/><br/>
-    <input type="submit" value="Submit">
+    <input type="button" value="Submit" onclick="submit_answer();">
 </form>
 
-<h3>USER ANSWER</h3>
-<div id="user_answer"></div>
+<input id="question_number" value="0" type="hidden"/>
+<script>askQuestion()</script>
+
+<div id="result"></div>
+
 </body>
 </html>
