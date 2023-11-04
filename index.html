@@ -8,13 +8,14 @@
 
 <script src="flashCards.js"></script>
 <script src="questions.js"></script>
+<script src="mathQuestions.js"></script>
 
 <input id = "total_correct" type="hidden" value="0">
-<div style="float: left;" id="total_correct_display">(0 / 0)</div> <div style="float: left;">&nbspCorrect</div>
+<div style="float: left; display: none;" id="total_correct_display">(0 / 0)</div> <div style="float: left;"></div>
 <br/>
 <div id = "Question"></div>
 <br/>
-<form id = "answer_question" >
+<form id = "answer_question" style="display: none;">
     <input type="radio" id="a_answer_radio"  class="answer" value="">
     <label id="a_answer_label" for="a_answer_radio"></label>
     <br/>
@@ -29,8 +30,15 @@
     <br/><br/>
     <input type="button" value="Submit" onclick="submit_answer();">
 </form>
+<form id="math_question" style="display: none;">
+    <label id="math_label" for="math_answer">Math</label>
+    <input type="number" id="math_answer">
+    <input type="button" value="Submit" onclick="submit_math_answer()">
+</form>
 
 <input id="question_number" value="0" type="hidden"/>
+<input id="correct_math_answer" value="0" type="hidden"/>
+
 <script>askQuestion()</script>
 
 <div id="result"></div>
