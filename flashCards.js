@@ -41,7 +41,8 @@ function submit_answer() {
     let question = questionList[questionNumber]
     let correct_answer = question["correct_answer"]
     let user_answer = "f"
-    let total_questions = questionList.length
+    let totalQuestions = parseInt(document.getElementById("total_questions").value)
+    let totalCorrect = parseInt(document.getElementById("total_correct").value)
 
     let formElement = this.document.getElementById("answer_question")
     for (let answer in formElement) {
@@ -50,15 +51,18 @@ function submit_answer() {
             console.log(user_answer)
             formElement[answer].checked = false
             let divAnswer = document.getElementById("result")
-            let total_correct = parseInt(document.getElementById("total_correct").value)
             if (user_answer === correct_answer) {
-                total_correct += 1
-                document.getElementById("total_correct").value = total_correct
+                totalCorrect += 1
+                document.getElementById("total_correct").value = totalCorrect
                 divAnswer.innerText = "CORRECT"
-                document.getElementById("total_correct_display").innerText = "(" + total_correct + " / " + total_questions + ")"
             } else {
                 divAnswer.innerText = "WRONG"
             }
+
+            totalQuestions += 1
+            document.getElementById("total_questions").value = totalQuestions
+            document.getElementById("total_correct_display").innerText = "(" + totalCorrect + " / " + totalQuestions + ")"
+
             break;
         }
     }
@@ -74,12 +78,22 @@ function submit_math_answer() {
     let correct_answer = document.getElementById("correct_math_answer").value
     let divAnswer = document.getElementById("result")
     let math_equation = document.getElementById("math_label").innerText
+    let totalQuestions = parseInt(document.getElementById("total_questions").value)
+    let totalCorrect = parseInt(document.getElementById("total_correct").value)
 
     if (user_answer === correct_answer) {
         divAnswer.innerText = math_equation + correct_answer + " IS CORRECT"
+        totalCorrect += 1
+        document.getElementById("total_correct").value =  totalCorrect
+
     } else {
         divAnswer.innerText = user_answer + " IS WRONG. (" + math_equation + correct_answer + " is the correct answer.)"
     }
+
+    totalQuestions += 1
+    document.getElementById("total_questions").value = totalQuestions
+    document.getElementById("total_correct_display").innerText = "(" + totalCorrect + " / " + totalQuestions + ")"
+
     document.getElementById("math_answer").value = ""
     askQuestion()
 }

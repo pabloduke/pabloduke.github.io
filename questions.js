@@ -112,6 +112,22 @@ function getQuestionsList() {
                 "c_answer": "Killer Cow Award",
                 "d_answer": "Lombardi Trophy",
                 "correct_answer": "d"
+            },
+            {
+                "Question": "When did the United States enter WW2?",
+                "a_answer": "July 29th 1954",
+                "b_answer": "January 3rd 1959",
+                "c_answer": "January 20th 1961",
+                "d_answer": "December 7, 1941",
+                "correct_answer": "d"
+            },
+            {
+                "Question": "When did the United States enter WW2?",
+                "a_answer": "July 29th 1954",
+                "b_answer": "January 3rd 1959",
+                "c_answer": "January 20th 1961",
+                "d_answer": "December 7, 1941",
+                "correct_answer": "d"
             }
         ]
     }
